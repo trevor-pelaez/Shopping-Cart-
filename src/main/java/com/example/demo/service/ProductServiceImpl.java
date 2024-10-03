@@ -1,9 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
-import com.example.demo.repositories.PartRepository;
-import com.example.demo.repositories.ProductRepository;
+import com.example.demo.repositories.BoosterPacksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,23 +16,23 @@ import java.util.Optional;
  */
 @Service
 public class ProductServiceImpl implements ProductService{
-    private ProductRepository productRepository;
+    private BoosterPacksRepository boosterPacksRepository;
 
     @Autowired
 
-    public ProductServiceImpl(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public ProductServiceImpl(BoosterPacksRepository boosterPacksRepository) {
+        this.boosterPacksRepository = boosterPacksRepository;
     }
 
     @Override
     public List<Product> findAll() {
-        return (List<Product>) productRepository.findAll();
+        return (List<Product>) boosterPacksRepository.findAll();
     }
 
     @Override
     public Product findById(int theId) {
         Long theIdl=(long)theId;
-        Optional<Product> result = productRepository.findById(theIdl);
+        Optional<Product> result = boosterPacksRepository.findById(theIdl);
 
         Product theProduct = null;
 
@@ -51,19 +49,19 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public void save(Product theProduct) {
-        productRepository.save(theProduct);
+        boosterPacksRepository.save(theProduct);
 
     }
 
     @Override
     public void deleteById(int theId) {
         Long theIdl=(long)theId;
-        productRepository.deleteById(theIdl);
+        boosterPacksRepository.deleteById(theIdl);
     }
     public List<Product> listAll(String keyword){
         if(keyword !=null){
-            return productRepository.search(keyword);
+            return boosterPacksRepository.search(keyword);
         }
-        return (List<Product>) productRepository.findAll();
+        return (List<Product>) boosterPacksRepository.findAll();
     }
 }

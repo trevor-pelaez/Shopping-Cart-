@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.OutsourcedPart;
-import com.example.demo.repositories.OutsourcedPartRepository;
+import com.example.demo.repositories.CardSleevesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +16,10 @@ import java.util.Optional;
  */
 @Service
 public class OutsourcedPartServiceImpl implements OutsourcedPartService{
-    private OutsourcedPartRepository partRepository;
+    private CardSleevesRepository partRepository;
 
     @Autowired
-    public OutsourcedPartServiceImpl(OutsourcedPartRepository partRepository) {
+    public OutsourcedPartServiceImpl(CardSleevesRepository partRepository) {
         this.partRepository = partRepository;
     }
 

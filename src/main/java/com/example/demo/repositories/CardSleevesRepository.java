@@ -9,5 +9,5 @@ import org.springframework.data.repository.CrudRepository;
  *
  *
  */
-public interface OutsourcedPartRepository extends CrudRepository<OutsourcedPart,Long> {
+public interface CardSleevesRepository extends CrudRepository<OutsourcedPart,Long> {
 }

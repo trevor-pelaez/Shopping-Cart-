@@ -1,8 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.InhousePart;
-import com.example.demo.repositories.InhousePartRepository;
-import com.example.demo.repositories.PartRepository;
+import com.example.demo.repositories.CardSinglesRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -25,12 +24,12 @@ import static org.mockito.Mockito.when;
  * To change this template use File | Settings | File Templates.
  */
 class InhousePartServiceTest {
-    InhousePartRepository inhousePartRepository;
+    CardSinglesRepository cardSinglesRepository;
     InhousePartService inhousePartService;
     @BeforeEach
     void setUp() {
-        inhousePartRepository=mock(InhousePartRepository.class);
-        inhousePartService=new InhousePartServiceImpl(inhousePartRepository);
+        cardSinglesRepository =mock(CardSinglesRepository.class);
+        inhousePartService=new InhousePartServiceImpl(cardSinglesRepository);
     }
 
     @Test
@@ -38,7 +37,7 @@ class InhousePartServiceTest {
         InhousePart part=new InhousePart();
         List partData=new ArrayList();
         partData.add(part);
-        when(inhousePartRepository.findAll()).thenReturn(partData);
+        when(cardSinglesRepository.findAll()).thenReturn(partData);
         List<InhousePart> parts=inhousePartService.findAll();
         assertEquals(partData.size(),1);
     }

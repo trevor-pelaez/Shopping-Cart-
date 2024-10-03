@@ -9,5 +9,5 @@ import org.springframework.data.repository.CrudRepository;
  *
  *
  */
-public interface InhousePartRepository extends CrudRepository<InhousePart,Long> {
+public interface CardSinglesRepository extends CrudRepository<InhousePart,Long> {
 }
