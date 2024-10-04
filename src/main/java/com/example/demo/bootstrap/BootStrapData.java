@@ -43,6 +43,8 @@ public class BootStrapData implements CommandLineRunner {
             queensdiamond.setInv(17);
             queensdiamond.setPrice(5.00);
             queensdiamond.setId(1);
+            queensdiamond.setMinInv(1);
+            queensdiamond.setMaxInv(50);
             partRepository.save(queensdiamond);
 
             InhousePart lupismaxim = new InhousePart();
@@ -50,6 +52,8 @@ public class BootStrapData implements CommandLineRunner {
             lupismaxim.setPrice(3.75);
             lupismaxim.setInv(26);
             lupismaxim.setId(2);
+            lupismaxim.setMinInv(1);
+            lupismaxim.setMaxInv(50);
             partRepository.save(lupismaxim);
 
             InhousePart pharoahsdraw = new InhousePart();
@@ -57,6 +61,8 @@ public class BootStrapData implements CommandLineRunner {
             pharoahsdraw.setName("Pharoah's Draw");
             pharoahsdraw.setPrice(8.56);
             pharoahsdraw.setInv(42);
+            pharoahsdraw.setMinInv(1);
+            pharoahsdraw.setMaxInv(50);
             partRepository.save(pharoahsdraw);
 
             InhousePart monstergraveyard = new InhousePart();
@@ -64,6 +70,8 @@ public class BootStrapData implements CommandLineRunner {
             monstergraveyard.setInv(11);
             monstergraveyard.setId(4);
             monstergraveyard.setPrice(2.75);
+            monstergraveyard.setMinInv(1);
+            monstergraveyard.setMaxInv(50);
             partRepository.save(monstergraveyard);
 
             InhousePart tombofsuccumbing = new InhousePart();
@@ -71,6 +79,8 @@ public class BootStrapData implements CommandLineRunner {
             tombofsuccumbing.setPrice(5.65);
             tombofsuccumbing.setId(5);
             tombofsuccumbing.setInv(21);
+            tombofsuccumbing.setMinInv(1);
+            tombofsuccumbing.setMaxInv(50);
             partRepository.save(tombofsuccumbing);
 
 
