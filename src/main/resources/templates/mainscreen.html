@@ -18,7 +18,7 @@
 <div class="container">
     <h1>Browse Our Collection!</h1>
     <hr>
-    <h2>Booster Packs</h2>
+    <h2>Individual Cards</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
@@ -46,11 +46,13 @@
             <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
+
+
             </td>
         </tr>
         </tbody>
     </table>
-    <h2>Individual Cards</h2>
+    <h2>Booster Packs</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
         &nbsp;
@@ -82,6 +84,7 @@
             <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
+                <a th:href="@{/buyPack(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Buy Now</a>
             </td>
         </tr>
         </tbody>
