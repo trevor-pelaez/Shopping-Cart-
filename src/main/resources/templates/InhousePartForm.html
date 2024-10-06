@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Part Form</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
 </head>
 <body>
 <h1>Inhouse Part Detail</h1>
@@ -16,7 +17,7 @@
 <p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
 
 <p><input type="text" path="price" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
-<p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
+    <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
 
 <p><input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
     <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
@@ -34,7 +35,6 @@
 </form>
 <p><errors path="price" cssClass=""error/><p>
 
-<a href="http://localhost:8080/">Link
-    to Main Screen</a>
+<a href="http://localhost:8080/"> Main Screen</a>
 </body>
 </html>
