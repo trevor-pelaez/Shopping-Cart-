@@ -27,8 +27,8 @@
         <input type="button" value="Clear" id="btnClearPart" onclick="clearSearch()" />
     </form>
     <br><br>
-    <a href="http://localhost:63342/d287-java-frameworks/demo/templates/InhousePartForm.html?_ijt=vohlcj0vqekevo6qssm3oam7pn&_ij_reload=RELOAD_ON_SAVE" class="btn btn-primary btn-sm mb-3">Add Inhouse Part</a>
-    <a href="http://localhost:63342/d287-java-frameworks/demo/templates/OutsourcedPartForm.html?_ijt=j8to4780rvrm5qoc2vllv4lqep&_ij_reload=RELOAD_ON_SAVE" class="btn btn-primary btn-sm mb-3">Add Outsourced Part</a>
+    <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Inhouse Part</a>
+    <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Outsourced Part</a>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
@@ -43,7 +43,7 @@
             <td th:text="${tempPart.name}">1</td>
             <td th:text="${tempPart.price}">1</td>
             <td th:text="${tempPart.inv}">1</td>
-            <td><a href="http://localhost:63342/d287-java-frameworks/demo/templates/InhousePartForm.html?_ijt=vohlcj0vqekevo6qssm3oam7pn&_ij_reload=RELOAD_ON_SAVE" class="btn btn-primary btn-sm mb-3">Update</a>
+            <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
 
@@ -91,9 +91,7 @@
     </table>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+
     <li><a href="http://localhost:63342/d287-java-frameworks/demo/templates/About.html?_ijt=40n72ohsddn2588nmk2heni59m&_ij_reload=RELOAD_ON_SAVE">
         About Us</a>
     </li>
