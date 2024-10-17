@@ -16,8 +16,8 @@ import java.util.Set;
  *
  *
  */
+@ValidInventory
 @Entity
-@ValidDeletePart
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
@@ -29,9 +29,10 @@ public abstract class Part implements Serializable {
     @Min(value = 0, message = "Price value must be positive")
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
-    @Max(value = 50, message = "Cannot have more than fifty of one card")
     int inv;
+    @Min(value = 0, message = "Maximum inventory value must be positive")
     int maxInv;
+    @Min(value = 0, message = "Minimum inventory value must be positive")
     int minInv;
 
     @ManyToMany

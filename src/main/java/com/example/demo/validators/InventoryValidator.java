@@ -24,8 +24,8 @@ public class InventoryValidator implements ConstraintValidator<ValidInventory, P
         boolean isValid;
         boolean belowMin;
         boolean aboveMax;
-        belowMin = part.getInv() <= part.getMinInv();
-        aboveMax = part.getInv() >= part.getMaxInv();
+        belowMin = part.getInv() < part.getMinInv();
+        aboveMax = part.getInv() > part.getMaxInv();
         constraintValidatorContext.buildConstraintViolationWithTemplate("Inventory is out of range").addPropertyNode("inv").addConstraintViolation();
         if(belowMin || aboveMax){
             isValid = false;
