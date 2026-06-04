@@ -1,18 +1,3 @@
-
-Changed the name of the shop to Tasha's Cauldron of Trading Cards in the mainscreen.html file on line 14.
-Also changed the name of the header "Products" to "Individual Cards", the "Parts" to "Booster Packs" and the 
-"Shop" header to "Browse Our Collection!" on the readme.md file on line 19, 21, and 53. Added background color on line 16
-for readme.md file. 
- Created "About" page and stored in "templates" folder, including a logo and link to mainscreen page on line 20-22. 
-edited repository names to align with store theme. added 5 individual parts and 5 products all to "BootStrapData.java"
-file on lines 40-148.
- created new controller for buying a product called "BuyPackController.java". added buy now button to all products
-in the "mainscreen.html" file that decrements associated object on line 87.
-created "Success.html" and "Failure.html" to show whether the buy was successful or not.
- added inventory maximum and minimum fields to the "Part.java" file on lines 89-95.
-modified the sample inventory by assigned min/max inventory values on lines 46-47, 55-56, 64-65,73-74, and 82-83 on the "BootStrapData.java" file
-added text inputs for "InhousepartForm.html" and "OutsourcedPartForm.html" so the user can set the min/max inventory values on lines 23-25 for both.
-added max constraint for inventory at 50 in "Part.java" on line 31.
-added validator with "InventoryValidator.java" and its annotation "ValidInventory" within the validators folder
-added two tests on the PartTest.java file on lines 160-176.
-removed DeletePartValidator.java since it was unused
+This project uses the simulates a store's webpage, allowing you to add and remove items to and from a shopping
+cart. It does not store the data persistently, however it utilizes the bootstrap framework for the frontend 
+to be responsive and mobile friendly.
